@@ -51,8 +51,10 @@ class Date:
         """
         if type(init_day) != int:
             raise TypeError("day must be an integer")
+        
         if type(init_month) != int:
             raise TypeError("mont must be an integer")
+        
         if type(init_year) != int:
             raise TypeError("year must be an integer")
         
@@ -62,7 +64,8 @@ class Date:
 
     def get_date(self)->None:
         """
-        DOCSTRING
+        It print the data in form formate:
+        DD/MM/YYYY
 
         """
         print(self.day, "/", self.month,"/", self.year)
@@ -92,10 +95,13 @@ class Resolution:
     def get_resolution(self)->None:
 
         """
-        doc String
+        It prints the resolution of display in the from
+        pixel x pixel
+
+        @ex. 1920x1080P
         
         """
-        print(self.length, "x", self.width) 
+        print(self.length, "x", self.width,end="P \n") 
 
 class Product_Dimension:
  
@@ -131,7 +137,8 @@ class Product_Dimension:
 
     def get_Product_Dimension(self)->None:
         """
-        docstring
+        this function print the dimension of the product in the 
+        lengtu x breadth x height x weight
         """
         print(self.length, "x", self.breadh, "x", self.height, "x", self.weight)
 
@@ -260,10 +267,9 @@ class camera:
         self.weight = weight
 
 
-    def show(self):
+    def show(self)->None:
         """
         shows/print all the properties of the class camera
-
         
         """
         print("Product_information: ",self.Product_information) 

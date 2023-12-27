@@ -10,9 +10,18 @@ crid=FCJV6JJSFIKG&keywords=watches&qid=1703562582&s=watches&sprefix=analog%2Bwat
 
 # server site
 class Dimension:
-    """
-    These class implement the Dimenstion class
+    """"
+    A class representing the dimensions and weight of a product.
 
+    Attributes:
+    - length (float): The length of the product.
+    - breadth (float): The breadth or width of the product.
+    - height (float): The height of the product.
+    - weight (float): The weight of the product.
+
+    Raises:
+    - TypeError: If any dimension or weight is not a float.
+    - ValueError: If any dimension or weight is non-positive.
     """
     def __init__(self,
                  length: float,
@@ -56,7 +65,34 @@ class Dimension:
 
 class watch:
     """
-    These class implement the watch 
+    A class representing a wristwatch.
+
+    Attributes:
+    - BandColour (str): The color of the watch band.
+    - BandMaterial (list of str): The materials used in the watch band.
+    - BandWidth (str): The width of the watch band.
+    - BezelMaterial (str): The material used for the watch bezel.
+    - Brand (str): The brand of the watch.
+    - CaseDimension (Dimension): The dimensions and weight of the watch case.
+    - CaseMaterial (str): The material used for the watch case.
+    - CaseThickness (str): The thickness of the watch case.
+    - DialColour (str): The color of the watch dial.
+    - CrystalMaterial (str): The material used for the watch crystal.
+    - DisplayType (str): The type of display (e.g., Analog).
+    - CaseShape (str): The shape of the watch case.
+    - ItemWeight (str): The weight of the watch.
+    - ModelNumber (str): The model number of the watch.
+    - PartNumber (str): The part number of the watch.
+    - SpecialFeature (list of str): Special features of the watch.
+    - WarrantyType (str): The type of warranty provided.
+    - WaterResistanceDepth (str): The water resistance depth of the watch.
+    - price (float): The price of the watch.
+
+    Raises:
+    - TypeError: If any attribute has an invalid type.
+
+    Methods:
+    - show(): Prints all the properties of the watch object.
     """
     def __init__(self,
                 BandColour: str,	
@@ -161,6 +197,10 @@ class watch:
 
     def show(self)->None:
 
+        """
+        Prints all the properties of the watch object.
+        """
+
         print("BandColour:", self.BandColour)
 
         print("BandMaterial:", self.BandMaterial)
@@ -202,7 +242,9 @@ class watch:
 
 def main()->None:
 
-    """main function"""
+    """
+    Main function demonstrating the use of the Watch class.
+    """
 
     Fossil_Chronograph_White_Dial_Mens_Watch = watch(
                                                 "Brown",
