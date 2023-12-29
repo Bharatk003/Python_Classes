@@ -16,13 +16,15 @@ import sys
 # Product_Dimenstion(11.4,2.3,4.6),
 def is_date_valid(day: int, month: int, year:int)->bool:
     """
-    the function checkes whether given combination of 
-    @day, @month, @year, forms a valid date as per Gregorian 
-    Calender and returns : True/False accourdingly 
-    @day: day value
-    @month: month value
-    @year: year value
-    
+    Check if the given combination of day, month, and year forms a valid date in the Gregorian Calendar.
+
+    Args:
+        day (int): Day value.
+        month (int): Month value.
+        year (int): Year value.
+
+    Returns:
+        bool: True if the date is valid, False otherwise.
     """
     is_leap = (year % 4 ==0 ) and (year % 400 == 0 or year % 100 != 0)
     return (
@@ -79,8 +81,11 @@ class Resolution:
 
     def __init__(self, length: float, width: float)->None:
         """
-        Constructor for Resolution class
+        Initialize a Resolution object.
 
+        Args:
+            length (float): Length of the display.
+            width (float): Width of the display.
         """
         # type check
         if type(length) != float:
@@ -106,13 +111,20 @@ class Resolution:
 class Product_Dimension:
  
     """
-    This class show the dimension in the 
-    length , breadth, height, and weight
+        Initialize a Product_Dimension object.
+
+        Args:
+            length (int | float): Length of the product.
+            breadth (int | float): Breadth of the product.
+            height (int | float): Height of the product.
+            weight (int | float): Weight of the product.
     """
+    
     def __init__(self, length:(int|float),
                     breadth:(int|float),
                     height:(int|float),
                     weight: (int|float)):
+        
         # type checking
         if type(length) != int and type(length) != float:
             raise TypeError("len should be in float or int")
@@ -126,6 +138,7 @@ class Product_Dimension:
         if type(weight) != int and type(weight) != float:
             raise TypeError("weigh must be in float or int")
         
+        #value checks
         if length <= 0 or breadth <= 0 or height <= 0 or weight <=0:
             raise ValueError("Dimensions should not be negative")
 
@@ -144,7 +157,7 @@ class Product_Dimension:
 
 class camera:
     """
-        This class show all properties of camera
+        Represents a camera with various properties.
     """
     def __init__(self, 
                 Product_information: str,
@@ -331,7 +344,7 @@ class camera:
 # client site
 def main()->None:
     """
-    DocString
+    main function to demonstrate the Camera class.
 
     """
         
@@ -362,6 +375,6 @@ def main()->None:
                                         )
 
     insta360_X3_Action_Camera.show()
-
+    sys.exit(0)
 
 main()

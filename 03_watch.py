@@ -50,7 +50,7 @@ class Dimension:
         
         self.length = length
         self.breadth = breadth
-        self.height = height
+        self.height = height        
         self.weight = weight
 
     def get_Dimension(self)->None:
@@ -88,12 +88,12 @@ class watch:
     - WaterResistanceDepth (str): The water resistance depth of the watch.
     - price (float): The price of the watch.
 
-    Raises:
-    - TypeError: If any attribute has an invalid type.
+        Raises:
+        - TypeError: If any attribute has an invalid type.
 
-    Methods:
-    - show(): Prints all the properties of the watch object.
-    """
+        Methods:
+        - show(): Prints all the properties of the watch object.
+        """
     def __init__(self,
                 BandColour: str,	
                 BandMaterial: [str],	

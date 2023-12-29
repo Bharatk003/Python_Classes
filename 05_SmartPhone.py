@@ -63,8 +63,13 @@ class Dimension:
         return self.weight
     
 
+    def getDimension(self)->None:
 
-    
+        """
+        it print out the Dimension of the product
+        """
+        print("Dimension: ", self.getlength(), "x", self.getbreadth(), "x", self.getheight(), ":", self.getweight())
+
 
 
 class Rating:
@@ -229,6 +234,8 @@ class SmartPhone:
 
         print("Product_dimension:  ", self.Product_dimension.getlength(), "x", self.Product_dimension.getbreadth(),"x", 
                                     self.Product_dimension.getweight(), ":", self.Product_dimension.getweight())
+
+        self.Product_dimension.getDimension()
 
         print("Batteries:  ", self.Batteries)
 
